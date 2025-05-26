@@ -1,0 +1,5 @@
+.vscode
+*.o
+cub3D
+mlx
+*:Zone.Identifier
