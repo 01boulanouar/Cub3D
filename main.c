@@ -16,6 +16,7 @@ void	init_mlx(t_cube *cube)
 			&(cube->frame.endian));
 	if (!cube->frame.addr)
 		ft_exit(EXIT_FAILURE);
+	mlx_key_hook(cube->win, key_hook, cube);
 	mlx_hook(cube->win, CLOSE_BUTTON, 0, close_window, cube);
 }
 

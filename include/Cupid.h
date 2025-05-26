@@ -17,8 +17,6 @@
 # define HEIGHT 720
 # define WIDTH 1280
 
-# define TILE_SIZE 64
-
 # define ESC 65307
 
 # define CLOSE_BUTTON 17
@@ -33,7 +31,8 @@
 # define LEFT 65361
 # define RIGHT 65363
 
-# define TILE_SIZE 64
+# define MOVE_SPEED 0.5
+#define ROT_SPEED 0.1
 
 typedef enum e_direction
 {
@@ -139,6 +138,7 @@ void				draw(t_cube *cube);
 void				pixel_put(t_cube *cube, int x, int y, int color);
 void				render(t_cube *cube);
 int					close_window(t_cube *cube);
+int					key_hook(int keycode, t_cube *cube);
 
 // utils
 unsigned long long	ft_atol(const char *str);

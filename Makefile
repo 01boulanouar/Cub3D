@@ -30,8 +30,7 @@ $(MLX):
 	make -C mlx
 
 $(NAME): $(OBJ) $(MLX)
-	$(CC) $(CFLAGS) $(OBJ) $(MLX) $(MLX_FLAGS) -o $(NAME)  -fsanitize=address -g
-
+	$(CC) $(CFLAGS) $(OBJ) $(MLX) $(MLX_FLAGS) -o $(NAME) 
 %.o: %.c include/Cupid.h
 	$(CC) $(CFLAGS) -I./include -c $< -o $@
 
